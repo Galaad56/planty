@@ -26,6 +26,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	astra_footer();
 		
 	astra_footer_after(); 
+
+	wp_nav_menu(['theme_location'=>'footer_menu']);
 ?>
 	</div><!-- #page -->
 <?php 
@@ -34,3 +36,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 	</body>
 </html>
+
+
