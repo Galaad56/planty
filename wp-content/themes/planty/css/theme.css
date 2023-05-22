@@ -19,8 +19,9 @@ p {
 }
 
 #menu-item-66 a:hover{
-  
+   transform:scale(1.15);
 }
+
 #menu-item-67 a:hover{
    background-color:#C02E44;
 }
@@ -44,6 +45,9 @@ p {
    list-style-type: none;
 }
 
+#menu-menu_bas {
+margin: auto;
+}
 
 .menu-link{
    color: black;
@@ -62,7 +66,8 @@ p {
 #conteneur_btn{
    width: 100%;
    display:flex;
-   justify-content: center;
+   flex-direction: column;
+   align-items: center;
 }
 
 #btn_1{
@@ -89,11 +94,9 @@ p {
    padding-bottom: 40px;
 }
 
-
 .article_1{
    display:flex;
    flex-direction: column;
-   height:flex;
    gap:20px;
 }
 
@@ -133,7 +136,6 @@ p {
 }
 
 .btn_quantite_plus{
-  
    background-color: #E0B9B4;
    height:50%;
    width:100%;
@@ -141,7 +143,6 @@ p {
    padding:0%;
    border-radius: 0px 10px 0px 0px !important;
    border-bottom: solid 1px white;
-   
 }
 
 .btn_quantite_moins{
@@ -151,7 +152,6 @@ p {
    margin:0px;
    padding:0%;
    border-radius: 0px 0px 10px 0px !important;
-  
 }
 
 .btn_ok {
@@ -162,7 +162,6 @@ p {
    margin:0px;
    padding:0px;
    margin-left: 15px;
-
 }
 
 #conteneur_bas {
@@ -210,26 +209,48 @@ justify-content: space-around;
 #bas_form{
    width:100%;
    display: flex;
-   justify-content: center;
+   flex-direction: column;
+   align-items: center;
 }
 
-/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1280px */
+
+/*lien admin menu principal*/
+
+#menu_admin{
+   color:black;
+   font-size: 16px;
+}
+
+#menu-item-admin {
+   width: 120px;
+   margin: auto;
+}
+
+
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 920px */
+@media screen and (max-width: 920px) {
+   #menu-item-admin {
+      
+      margin:15px;
+   }
+
+}
+
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 450px */
 @media screen and (max-width: 450px) {
 
    #conteneur_haut{
       display:flex;
       flex-direction: column;
       justify-content: space-around;
-    gap: 20px;
- 
-
+      gap: 20px;
    }
 
    #conteneur_bas {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      }
+   }
 
    .zone_saisie {
        justify-content: space-around;
@@ -247,14 +268,5 @@ justify-content: space-around;
       
 }
 
-/*lien admin menu principal*/
 
-#menu_admin{
-   color:black;
-}
-
-#menu-item-admin {
-   width: 120px;
-   margin: auto;
-}
 
