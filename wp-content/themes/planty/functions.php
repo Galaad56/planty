@@ -9,26 +9,15 @@ function theme_enqueue_styles(){
     wp_enqueue_style('theme-style', get_stylesheet_directory_uri() . '/css/theme.css', array(), filemtime(get_stylesheet_directory() . '/css/theme.css'));
 }
 
-add_filter( 'wp_nav_menu_items', 'add_extra_item_to_nav_menu', 10, 2 );
-
-
-/*function add_extra_item_to_nav_menu( $items, $args ) {
-    if (is_user_logged_in()&& $args->theme_location = 'primary') {
-        $items .= '<li><a class"menu_admin" href="http://localhost/planty/wp-admin/">'.var_dump($args).'</a></li>';
-    }
-   
-    return $items;
-}*/
 
 
 add_filter('wp_nav_menu_items', 'add_extra_item_to_nav_menu', 10, 2);
 
 function add_extra_item_to_nav_menu($items, $args) {
    
-    if (is_user_logged_in()&& $args->theme_location <> 'footer_menu') {
+    if (is_user_logged_in()&& (($args->theme_location == 'mobile_menu')||$args->theme_location == 'primary')) {
         // Nouvel élément à ajouter
-         $new_item = '<li id="menu-item-admin"><a id="menu_admin" href="http://localhost/planty/wp-admin/">Admin</a></li>';
-         //$new_item = '<li id="menu-item-admin"><a id="menu_admin" href="http://localhost/planty/wp-admin/">'.var_dump($args).'</a></li>';
+         $new_item = '<li id="menu-item-admin" class="menu-item"><a id="menu_admin" href="http://localhost/planty/wp-admin/">Admin</a></li>';
         // Insérer le nouvel élément à l'index souhaité
          $index = 1; 
          $items_array = explode('</li>', $items);

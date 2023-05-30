@@ -13,18 +13,32 @@ p {
 .main-header-menu li:last-child{
    background-color: #DC9F96;
 }
-   
+
+
 #menu-item-67 a{
    color:white;
 }
 
-#menu-item-66 a:hover{
+.menu-item:hover{
    transform:scale(1.15);
 }
 
-#menu-item-67 a:hover{
-   background-color:#C02E44;
+#menu-item-admin:hover{
+   transform:scale(1.15);
 }
+
+#menu-item-67:hover{
+   background-color:#C02E44;
+   transform:scale(1);
+}
+
+#ast-hf-menu-1 {
+   transform:scale(1);
+}
+#ast-hf-mobile-menu .menu-item:hover{
+   transform:scale(1);
+}
+
 
 /* body */
 
@@ -50,6 +64,10 @@ margin: auto;
 }
 
 .menu-link{
+   color: black;
+}
+
+.menu-link:hover{
    color: black;
 }
 
@@ -264,8 +282,7 @@ justify-content: space-around;
    #colonne{
       border-right: none;
       padding-right: 0px;
-   }
-      
+   }     
 }
 
 
